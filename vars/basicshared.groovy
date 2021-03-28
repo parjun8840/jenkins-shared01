@@ -1,3 +1,4 @@
+import com.cwctravel.hudson.plugins.extended_choice_parameter.ExtendedChoiceParameterDefinition
 def printMyName(name){
 	echo "${name}"
 	def multiSelect= new ExtendedChoiceParameterDefinition("name", 
