@@ -1,5 +1,6 @@
-import com.cwctravel.hudson.plugins.extended_choice_parameter.ExtendedChoiceParameterDefinition
+
 package com.basicsShared;
+import com.cwctravel.hudson.plugins.extended_choice_parameter.ExtendedChoiceParameterDefinition
 def multiSelect= new ExtendedChoiceParameterDefinition("name", 
             "PT_MULTI_SELECT", 
             "blue,green,yellow,blue", 
