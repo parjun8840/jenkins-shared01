@@ -34,5 +34,6 @@ def printMyName(name){
             ",") 
 
    def userInput = input  id: 'customID', message: 'Let\'s promote?', ok: 'Release!', parameters:  [multiSelect]
+	return 'My name is ' + "${name}"
 
 }
