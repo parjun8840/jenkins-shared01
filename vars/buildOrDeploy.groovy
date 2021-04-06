@@ -4,15 +4,15 @@ def call(String command) {
             pipeline {
                   agent any
                    parameters {
-        string(name: 'Build-PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+        string(name: 'BuildPERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
 
-        text(name: 'Build-BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
+        text(name: 'BuildBIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
 
-        booleanParam(name: 'Build-TOGGLE', defaultValue: true, description: 'Toggle this value')
+        booleanParam(name: 'BuildTOGGLE', defaultValue: true, description: 'Toggle this value')
 
-        choice(name: 'Build-CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
+        choice(name: 'BuildCHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
 
-        password(name: 'Build-PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
+        password(name: 'BuildPASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
                   stages 
                   {
@@ -21,15 +21,15 @@ def call(String command) {
                               steps 
                               {
                                     echo "Build is executed"
-                                     echo "Hello ${params.Build-PERSON}"
+                                     echo "Hello ${params.BuildPERSON}"
 
-                                     echo "Biography: ${params.Build-BIOGRAPHY}"
+                                     echo "Biography: ${params.BuildBIOGRAPHY}"
 
-                                    echo "Toggle: ${params.Build-TOGGLE}"
+                                    echo "Toggle: ${params.BuildTOGGLE}"
 
-                                     echo "Choice: ${params.Build-CHOICE}"
+                                     echo "Choice: ${params.BuildCHOICE}"
 
-                                     echo "Password: ${params.Build-PASSWORD}"
+                                     echo "Password: ${params.BuildPASSWORD}"
                               }
 
 
@@ -42,15 +42,15 @@ def call(String command) {
             pipeline {
                   agent any
                     parameters {
-        string(name: 'Deploy-PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+        string(name: 'DeployPERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
 
-        text(name: 'Deploy-BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
+        text(name: 'DeployBIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
 
-        booleanParam(name: 'Deploy-TOGGLE', defaultValue: true, description: 'Toggle this value')
+        booleanParam(name: 'DeployTOGGLE', defaultValue: true, description: 'Toggle this value')
 
-        choice(name: 'Deploy-CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
+        choice(name: 'DeployCHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
 
-        password(name: 'Deploy-PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
+        password(name: 'DeployPASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
                   stages 
                   {
@@ -59,15 +59,15 @@ def call(String command) {
                               steps 
                               {
                                     echo "Deploy is executed"
-                                     echo "Hello ${params.PERSON}"
+                                     echo "Hello ${params.DeployPERSON}"
 
-                echo "Biography: ${params.Deploy-BIOGRAPHY}"
+                echo "Biography: ${params.DeployBIOGRAPHY}"
 
-                echo "Toggle: ${params.Deploy-TOGGLE}"
+                echo "Toggle: ${params.DeployTOGGLE}"
 
-                echo "Choice: ${params.Deploy-CHOICE}"
+                echo "Choice: ${params.DeployCHOICE}"
 
-                echo "Password: ${params.Deploy-PASSWORD}"
+                echo "Password: ${params.DeployPASSWORD}"
                               }
                         }     
                   }
