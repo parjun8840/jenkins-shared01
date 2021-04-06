@@ -49,8 +49,6 @@ def call(String command) {
         booleanParam(name: 'Deploy-TOGGLE', defaultValue: true, description: 'Toggle this value')
 
         choice(name: 'Deploy-CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
-        
-        file(name='Deploy-Myfile', description='This is MyFile')
 
         password(name: 'Deploy-PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
