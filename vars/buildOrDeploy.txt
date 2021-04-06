@@ -1,0 +1,3 @@
+buildOrDeploy
+	It will build or deploy as per the argument passed to it.
+  You can excute multi environment deployments using similar concept.
