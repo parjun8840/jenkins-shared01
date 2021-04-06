@@ -11,8 +11,6 @@ def call(String command) {
         booleanParam(name: 'Build-TOGGLE', defaultValue: true, description: 'Toggle this value')
 
         choice(name: 'Build-CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
-        
-        file(name='Build-Myfile', description='This is MyFile')
 
         password(name: 'Build-PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
