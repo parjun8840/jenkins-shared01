@@ -33,7 +33,6 @@ def printMyName(name){
             "multiselect", 
             ",") 
 	
-echo "The value of Global variable: ${global_varirable}"
 
    def userInput = input  id: 'customID', message: 'Let\'s promote?', ok: 'Release!', parameters:  [multiSelect]
 	return 'My name is ' + "${name}"
