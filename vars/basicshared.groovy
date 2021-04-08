@@ -33,10 +33,7 @@ def printMyName(name){
             "multiselect", 
             ",") 
 	
-    def env = System.getenv()
-env.each{
-println it
-} 
+
    def userInput = input  id: 'customID', message: 'Let\'s promote?', ok: 'Release!', parameters:  [multiSelect]
 	return 'My name is ' + "${name}"
 	
